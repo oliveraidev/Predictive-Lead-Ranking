@@ -1,0 +1,153 @@
+{
+  "data_quality": {
+    "columns": 17,
+    "duplicate_feature_rows": 1322,
+    "duplicate_full_rows": 0,
+    "holdout_rows_with_training_feature_match": 375,
+    "null_values": 0,
+    "pdays_minus_one": 36954,
+    "positive_count": 5289,
+    "positive_prevalence": 0.11698480458295547,
+    "rows": 45211,
+    "unknown_counts": {
+      "contact": 13020,
+      "default": 0,
+      "education": 1857,
+      "housing": 0,
+      "job": 288,
+      "loan": 0,
+      "marital": 0,
+      "month": 0,
+      "poutcome": 36959,
+      "y": 0
+    }
+  },
+  "decision_point": "Pre-contact prioritization using client attributes and prior-campaign history",
+  "environment": {
+    "packages": {
+      "ipykernel": "7.2.0",
+      "jupyter": "1.1.1",
+      "matplotlib": "3.10.9",
+      "nbclient": "0.11.0",
+      "nbformat": "5.11.1",
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scikit-learn": "1.8.0",
+      "streamlit": "1.58.0"
+    },
+    "python": "3.14.4"
+  },
+  "excluded_features": [
+    "duration",
+    "contact",
+    "day",
+    "month",
+    "campaign",
+    "pdays"
+  ],
+  "features": [
+    "age",
+    "balance",
+    "previous",
+    "job",
+    "marital",
+    "education",
+    "default",
+    "housing",
+    "loan",
+    "poutcome"
+  ],
+  "holdout": {
+    "accuracy": 0.8933982085591065,
+    "average_precision": 0.34718729116679053,
+    "f1": 0.26858877086494687,
+    "majority_class_accuracy": 0.8830034280659074,
+    "positive_count": 1058,
+    "positive_prevalence": 0.11699657193409267,
+    "precision": 0.6807692307692308,
+    "recall": 0.16729678638941398,
+    "roc_auc": 0.7204263547080834,
+    "size": 9043
+  },
+  "ranking": {
+    "capacity_fraction": 0.011058277120424637,
+    "capture_at_k": 0.0661625708884688,
+    "lift_at_k": 5.983081285444234,
+    "positives_captured_at_k": 70,
+    "precision_at_k": 0.7,
+    "random_expected_positives_at_k": 11.699657193409267,
+    "tie_breaker": "source_row_id ascending",
+    "top_k": 100
+  },
+  "schema_version": 1,
+  "score_interpretation": "Uncalibrated model score for ranking, not an individual conversion probability",
+  "selected_model": "Logistic Regression",
+  "selection": {
+    "folds": 3,
+    "primary_metric": "mean validation average precision",
+    "results": [
+      {
+        "fold_average_precision": [
+          0.3396192116295493,
+          0.3448210882676639,
+          0.34979488663949576
+        ],
+        "fold_roc_auc": [
+          0.7094192471317433,
+          0.7088149179993685,
+          0.7152111221666707
+        ],
+        "mean_average_precision": 0.344745062178903,
+        "mean_roc_auc": 0.7111484290992608,
+        "model": "Logistic Regression",
+        "std_average_precision": 0.004154549751107538,
+        "std_roc_auc": 0.002883332521584987
+      },
+      {
+        "fold_average_precision": [
+          0.3396347295522,
+          0.339111072544709,
+          0.3489034837439589
+        ],
+        "fold_roc_auc": [
+          0.71086293523489,
+          0.7082748423474738,
+          0.71594453963174
+        ],
+        "mean_average_precision": 0.34254976194695597,
+        "mean_roc_auc": 0.7116941057380347,
+        "model": "Balanced Logistic Regression",
+        "std_average_precision": 0.004497843162424729,
+        "std_roc_auc": 0.0031858224905606533
+      },
+      {
+        "fold_average_precision": [
+          0.28850406658082595,
+          0.2967831125888436,
+          0.2858349303276633
+        ],
+        "fold_roc_auc": [
+          0.6816024864664649,
+          0.6732867737091679,
+          0.6722989435153373
+        ],
+        "mean_average_precision": 0.2903740364991109,
+        "mean_roc_auc": 0.6757294012303233,
+        "model": "Random Forest",
+        "std_average_precision": 0.0046610631353425505,
+        "std_roc_auc": 0.004172433324108681
+      }
+    ],
+    "seed": 42,
+    "shuffle": true,
+    "tie_breaker": "model name ascending"
+  },
+  "source_sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+  "split": {
+    "seed": 42,
+    "stratified": true,
+    "test_fraction": 0.2,
+    "training_size": 36168
+  },
+  "top_leads_sha256": "eeb23941324a5e5e70a021259e545f4a1f8f86bd1fdb83c924ec0fd3df508dc5"
+}
